@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Grapher Test
+		</title>
+	</head>
+	<body style="background-color: #333333;">
+	</body>
+</html>
+
+<script type="text/javascript" src="grapher.js"></script>
+<script type="text/javascript">
+	
+	var grapherSettings = {
+		 width: 1000
+		,colors: {
+			bg: "#FFFFFF"
+		}
+	}
+	
+	var grapher = new Grapher(grapherSettings);
+	
+	var i = 0;
+	
+	function addData(){
+		grapher.push(Math.sin(i/50)+1);
+		i++;
+	}
+	
+	setInterval(addData, 20);
+	
+</script>
